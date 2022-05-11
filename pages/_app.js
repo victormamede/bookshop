@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>The book club</title>
+        <title>the book club</title>
       </Head>
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
