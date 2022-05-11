@@ -10,8 +10,6 @@ import {
   Divider,
   VStack,
 } from '@chakra-ui/react';
-import Image from 'next/image';
-import dog from '../assets/dog.svg';
 import mockBooks from '../mock/books';
 import { FaComment } from 'react-icons/fa';
 

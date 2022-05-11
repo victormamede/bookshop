@@ -56,12 +56,16 @@ export default function Header() {
           onClick={isOpen ? onClose : onOpen}
         />
         <Box p={1}>
-          <Image
-            width={70 * logoAspect}
-            height={70}
-            src={logo.src}
-            alt='logo'
-          />
+          <NextLink href={'/'}>
+            <a>
+              <Image
+                width={70 * logoAspect}
+                height={70}
+                src={logo.src}
+                alt='logo'
+              />
+            </a>
+          </NextLink>
         </Box>
         {/* Center this */}
         <HStack
