@@ -6,7 +6,12 @@ export default function Featured1() {
   return (
     <VStack my={5}>
       <Heading>Mais vendidos</Heading>
-      <Box gap={5} display={{ md: 'flex' }}>
+      <Box
+        gap={5}
+        display={{ md: 'flex' }}
+        justifyContent='center'
+        flexWrap={'wrap'}
+      >
         {mockBooks.map((book) => (
           <BookCard book={book} key={book.id} />
         ))}
