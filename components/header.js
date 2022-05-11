@@ -91,9 +91,9 @@ export default function Header() {
                 <Text>Taylor Swift</Text>
                 <Avatar
                   size={'sm'}
-                  src={
-                    'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                  }
+                  src={`https://i.pravatar.cc/300?rand=${(Math.random() + 1)
+                    .toString(36)
+                    .substring(7)}`}
                 />
               </HStack>
             </MenuButton>
@@ -116,7 +116,9 @@ export default function Header() {
         >
           <Stack as={'nav'} spacing={4}>
             {headerLinks.map((link) => (
-              <NavLink key={link}>{link}</NavLink>
+              <NavLink key={link.to} to={link.to}>
+                {link.title}
+              </NavLink>
             ))}
           </Stack>
         </Box>

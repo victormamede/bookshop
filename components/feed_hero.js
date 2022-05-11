@@ -1,8 +1,8 @@
-import { Box, Heading, Text, HStack, Flex } from '@chakra-ui/react';
+import { Container, Heading, Flex, Text, Box } from '@chakra-ui/react';
 import Image from 'next/image';
-import book from '../assets/book2.svg';
+import dog from '../assets/dog.svg';
 
-export default function HeroRead() {
+export default function FeedHero() {
   return (
     <Flex
       as={Box}
@@ -15,12 +15,11 @@ export default function HeroRead() {
       p={3}
     >
       <Heading fontWeight={600} lineHeight={'110%'}>
-        <Text as={'span'}>Lista de</Text>{' '}
         <Text as={'span'} color={'yellow.400'}>
-          Leitura
+          Feed
         </Text>
       </Heading>
-      <Image src={book} width={300} height={300} alt='book' />
+      <Image src={dog} width={300} height={300} alt='book' />
     </Flex>
   );
 }
