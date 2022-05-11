@@ -7,6 +7,7 @@ import {
   Avatar,
   HStack,
   Icon,
+  Divider,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import dog from '../assets/dog.svg';
@@ -20,12 +21,7 @@ export default function MessageBoard() {
         <Icon as={FaComment} />
         <Box boxShadow={'lg'} p={3} mb={3}>
           <HStack spacing={3} mb={3}>
-            <Avatar
-              size={'sm'}
-              src={`https://i.pravatar.cc/300?rand=${(Math.random() + 1)
-                .toString(36)
-                .substring(7)}`}
-            />
+            <Avatar size={'sm'} src={'/Frisk.webp'} />
             <Text fontWeight={'bold'}>Frisk</Text>
             <Text color='gray.600'> Sobre o livro - {mockBooks[0].title}</Text>
           </HStack>
@@ -36,12 +32,7 @@ export default function MessageBoard() {
         <Icon as={FaComment} />
         <Box boxShadow={'lg'} p={3} mb={3}>
           <HStack spacing={3} mb={3}>
-            <Avatar
-              size={'sm'}
-              src={`https://i.pravatar.cc/300?rand=${(Math.random() + 1)
-                .toString(36)
-                .substring(7)}`}
-            />
+            <Avatar size={'sm'} src={'/Undyne.webp'} />
             <Text fontWeight={'bold'}>Undyne</Text>
             <Text color='gray.600'> Sobre o livro - {mockBooks[1].title}</Text>
           </HStack>
@@ -51,6 +42,34 @@ export default function MessageBoard() {
           </Text>
         </Box>
       </HStack>
+      <HStack>
+        <Icon as={FaComment} />
+        <Box boxShadow={'lg'} p={3} mb={3}>
+          <HStack spacing={3} mb={3}>
+            <Avatar size={'sm'} src={'/Sans.webp'} />
+            <Text fontWeight={'bold'}>Sans</Text>
+            <Text color='gray.600'> Sobre o livro - {mockBooks[2].title}</Text>
+          </HStack>
+          <Text fontFamily={'"Comic Sans", cursive, sans-serif'}>
+            Bom, vou recomendar para o meu irmão
+          </Text>
+        </Box>
+      </HStack>
+      <HStack>
+        <Icon as={FaComment} />
+        <Box boxShadow={'lg'} p={3} mb={3}>
+          <HStack spacing={3} mb={3}>
+            <Avatar size={'sm'} src={'/papyrus.png'} />
+            <Text fontWeight={'bold'}>Papyrus</Text>
+            <Text color='gray.600'> Sobre o livro - {mockBooks[2].title}</Text>
+          </HStack>
+          <Text fontFamily={'Papyrus,fantasy'} fontSize={'4xl'}>
+            TODAS AS LETRAS E PERSONAGENS ESTAVAM DE CABEÇA PARA BAIXO E TINHA
+            98 VOLUMES
+          </Text>
+        </Box>
+      </HStack>
+      <Divider my={5} />
     </Container>
   );
 }
